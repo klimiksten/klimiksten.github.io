@@ -1,0 +1,146 @@
+.body_txt {color: #000000;
+text-align: justify;
+vertical-align: top;background:url(../images/cbg.gif) repeat-y;
+font-size: 12px;padding-top: 10px;
+padding-right: 30px;padding-bottom: 10px;
+padding-left: 30px;font-family: Tahoma, Arial;
+  margin: 0 auto;
+    max-width: 90%; 
+    min-width: 300px;}
+.company_name {font-size: 14px;font-weight: bold;text-transform: none;color: #FFFFFF;}
+.login_form {background-image: url(../images/login-form-bg.gif);background-repeat: repeat-x;height: 20px;width: 110px;border-width: 1px;border-style: solid;font-size: 11px;padding-top: 3px;padding-left: 1px;}
+#wrap{position:relative; min-height:100%; margin:0 auto; width:750px;}
+#conteiner{width:750px;	margin:0 auto;   
+        max-width: 90%; /* контейнер не превышает 90% ширины экрана */
+        min-width: 300px;}
+#footer{width:750px;
+ min-height:40px; 
+ background:url(../images/botbg.gif) repeat-y;
+ margin-left:auto;
+ margin-right:auto;color: #000000;
+ text-align: center;
+ padding-top: 1px;padding-bottom: 4px;
+ font-family:Arial, Helvetica, sans-serif;
+ font-size:12px;
+ max-width: 90%; /* контейнер не превышает 90% ширины экрана */
+ min-width: 300px;}
+ 
+#footer a{color: #000000;text-decoration: underline;
+style="margin: 0 auto;
+    max-width: 90%; 
+    min-width: 300px;
+    text-align:center;}
+#footer a:hover{color: #638E00;text-decoration: underline;
+    margin: 0 auto;
+    max-width: 90%; 
+    min-width: 300px;
+    text-align:center;}
+#header{height:455px; background:url(../images/p1bg.jpg) no-repeat;
+margin: 0 auto;
+    width: 1000px;
+    text-align: center;
+    max-width: 90%; /* контейнер не превышает 90% ширины экрана */
+    min-width: 500px;}
+#logo{
+  margin: 0 auto;
+    max-width: 90%; 
+    min-width: 300px;}
+#h_block{position:absolute;width:260px;
+font-family:Tahoma, Arial;font-size:12px;
+line-height: 17px;height: 260px;
+margin-top: 28px;margin-right: 0;margin-bottom: 0;margin-left: 49px;
+}
+#h_block p {margin: 0px 0 9px 0;}
+
+@charset "utf-8";
+/* CSS Document */
+
+.sidebarForm {
+		background: #f6f6f6;
+		box-shadow: 0 0 5px #ccc; 
+		-webkit-box-shadow: 0 0 5px #ccc;
+		-moz-box-shadow: 0 0 5px #ccc;
+		width: 420px;
+}
+
+#cor5 {
+		border-radius: 5px;
+		-moz-border-radius: 5px;
+		-webkit-border-radius: 5px;
+}
+
+.sidebarForm h4 {
+		font: 14px Verdana;
+		color: #333333;
+		text-align: left;
+		padding: 10px 10px 0 10px;
+}
+
+.sidebarForm label {
+		font: 12px Verdana;
+		color: #333;
+		padding: 10px;
+}
+
+.sidebarForm .input { 
+		width: 170px;
+		height: 20px;
+		overflow: hidden;
+		background: white;
+		border: solid 1px #DFE2E5;
+		margin: 5px 0 10px 10px;
+		box-shadow: 0 0 5px #ccc;
+		-webkit-box-shadow: 0 0 5px #ccc;
+		-moz-box-shadow: 0 0 5px #ccc;
+}
+
+.sidebarForm .input input {
+		width: 165px;
+		height: 26px;
+		background: white;
+		margin: -3px 0 0 -5px;
+		padding: 0px 8px;
+		border: none;
+		background: transparent;
+}
+
+.sidebarForm .textarea {
+		height: 70px;
+		width: 320px;
+		overflow: hidden;
+		background: white;
+		border: solid 1px #DFE2E5;
+		margin: 5px 0 10px 10px;
+		box-shadow: 0 0 5px #ccc;
+		-webkit-box-shadow: 0 0 5px #ccc;
+		-moz-box-shadow: 0 0 5px #ccc;
+}
+
+.sidebarForm .textarea textarea {
+		width: 316px;
+		height: 66px;
+		background: white;
+		border: none;
+		resize:none;
+}
+
+.sidebarForm button {
+		border: 2px #ccc solid;
+		width: 150px;
+		height: 25px;
+		font: 12px Verdana;
+		font-weight: 700;
+		color: #FFFFFF;
+		background-color: #cc0000;
+		padding-bottom: 2px;
+		margin: 5px 0 15px 135px;
+}
+
+/* Для больших экранов */
+@media (min-width: 1200px) { ... }
+/* Для некоторых нетбуков и планшетов (таблеток) */
+@media (min-width: 768px) and (max-width: 979px) { ... }
+/* Для планшетов и некоторых телефонов */
+@media (max-width: 767px) { ... }
+/* Для телефонов и некоторых устройств у которых совсем маленький экран */
+@media (max-width: 480px) { ... }
