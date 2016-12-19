@@ -1,0 +1,255 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Лето</title>
+<meta name="keywords" content="paper blog template, free html css layout" />
+<meta name="description" content="Paper Blog - Free CSS Template provided by Ftemplate.ru" />
+<link href="templatemo_style.css" rel="stylesheet" type="text/css" />
+<link href="css/jquery.ennui.contentslider.css" rel="stylesheet" type="text/css" media="screen,projection" />
+
+
+
+
+<link href="css/default.css" rel="stylesheet" type="text/css">
+
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function() {
+ $(".slider").each(function () { // обрабатываем каждый слайдер
+  var obj = $(this);
+  $(obj).append("<div class='nav'></div>");
+  $(obj).find("li").each(function () {
+   $(obj).find(".nav").append("<span rel='"+$(this).index()+"'></span>"); // добавляем блок навигации
+   $(this).addClass("slider"+$(this).index());
+  });
+  $(obj).find("span").first().addClass("on"); // делаем активным первый элемент меню
+ });
+});
+function sliderJS (obj, sl) { // slider function
+ var ul = $(sl).find("ul"); // находим блок
+ var bl = $(sl).find("li.slider"+obj); // находим любой из элементов блока
+ var step = $(bl).width(); // ширина объекта
+ $(ul).animate({marginLeft: "-"+step*obj}, 500); // 500 это скорость перемотки
+}
+$(document).on("click", ".slider .nav span", function() { // slider click navigate
+ var sl = $(this).closest(".slider"); // находим, в каком блоке был клик
+ $(sl).find("span").removeClass("on"); // убираем активный элемент
+ $(this).addClass("on"); // делаем активным текущий
+ var obj = $(this).attr("rel"); // узнаем его номер
+ sliderJS(obj, sl); // слайдим
+ return false;
+});
+</script>
+
+<script>
+ imgvisible=false;
+
+function imgscr(m,n)
+ {
+	
+ if(!imgvisible)
+ {
+	  iddd = n;
+ imgnew = new Image();
+ imgnew.src=m.src;
+firstsrc= m.src;
+ w =screen.width;
+ h =screen.height;
+ wimg=m.style.width;
+ himg=m.style.height;
+ m.id="retimg";
+ div = document.createElement('div');
+ dol = ( imgnew.height/screen.height) +(imgnew.width/screen.width)/2;
+ m.style.width=imgnew.width/dol;
+ m.style.height=imgnew.height/dol;
+ div.style.backgroundColor="#000000";
+ div.style.textAlign="center";
+ div.className='imgop';
+ div.style.position = 'fixed';
+ div.style.width=screen.width;
+ div.style.height=screen.height;
+ div.style.top='0';
+ div.style.left='0';
+ div.appendChild(m);
+ div.id="kvak";
+ document.body.appendChild(div);
+ imgvisible=true;
+ }
+ else 
+ {
+	 
+ elem = document.getElementById('kvak'); 
+ retimg.style.width=wimg;
+ retimg.style.height=himg;
+ document.body.removeChild(elem); 
+ text="<img src='"+firstsrc+"' width='100' id='"+iddd+"' height='100' onclick='imgscr(this,this.id)' style='cursor:pointer;' >";
+ document.getElementById(iddd+iddd).innerHTML=text;
+ imgvisible=false;
+ }
+ }
+</script>
+
+<style type="text/css">
+ .slider {
+ z-index: 9;
+ width: 700px;
+ height: 400px;
+ overflow: hidden;
+
+ position: relative;
+margin:0 auto;   
+        max-width: 90%; /* контейнер не превышает 90% ширины экрана */
+        min-width: 300px;
+ }
+ .slider ul,
+ .slider li {
+ padding: 0;
+ margin: 0;
+ list-style-type: none;
+ }
+ .slider ul {
+ width: 9999px; 
+ }
+ .slider ul li {
+ list-style-type: none;
+ float: left;
+ width: 700px;
+ height: 400px;
+	margin:0 auto;   
+        max-width: 90%; /* контейнер не превышает 90% ширины экрана */
+        min-width: 300px;
+ }
+ .slider .nav {
+ position: absolute;
+ left: 15px;
+ bottom: 12px; 
+ }
+ .slider .nav span {
+ opacity: 0.9;
+ background: #fff;
+ margin: 0 8px 0 0;
+ width: 16px;
+ height: 16px;
+ border-radius: 8px;
+ cursor: pointer;
+ overflow: hidden;
+ display: block;
+ float: left;
+ box-shadow: 0 1px 2px #000;
+ }
+ .slider .nav span.on {
+ background: #2e9419;
+ }
+</style>
+
+<style type="text/css">
+.blokimg {position: relative;}
+
+.overlay{
+  display: none;
+  height: auto;
+  left: -15%;
+  position: absolute;
+  top: -50%;
+  width: auto;
+  z-index: 999;
+}
+.overlay .overlay_container{
+  display: table-cell;
+  vertical-align: middle;
+}
+.overlay_container img{
+  background-color: #AB5;
+  padding: 10px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+}
+.overlay:target {
+  display: table;
+}
+</style>
+
+<div class="blokimg">
+<div class="overlay" id="contenedor1">
+<div class="overlay_container">
+<a href="#close">
+<img src="большое_изображение"/>
+</a>
+</div>
+</div>
+<a href="#contenedor1">
+<img src="маленькое_изображение" id="imagenM1" />
+</a>
+</div>
+</head>
+<body>
+<div id="templatemo_wrapper">
+    <div id="templatemo_left_column">
+    
+    	<div id="site_title">
+            <h1><a href=>Лето<span></span></a></h1>
+        </div>
+        
+        <div id="templatemo_menu">
+            <ul>
+                <li><a href="index.html" class="current">Главная</a></li>
+                <li><a href="Leto.html">Лето</a></li>
+                <li><a href="Vesna.html">Весна</a></li>
+              	<li><a href="Zima.html">Зима</a></li>
+				<li><a href="Osen'.html">Осень</a></li>
+            </ul>    	
+        </div><!-- end of templatemo_menu -->
+        
+        <div id="templatemo_sidebar">
+        
+        	<div class="sidebar_box">
+            
+               
+
+                
+                            
+            </div>
+    
+    	</div>
+    	
+    </div> <!-- end of templatemo_left_column -->
+	 <h1><a href=> САМЫЕ СОБЛАЗНИТЕЛЬНЫЕ КУПАЛЬНИКИ ДЛЯ БАРХАТНОГО СЕЗОНА<span></span></a></h1>
+
+	<div class="slider">
+	<ul>
+		<li><img src="images/01.jpg" width="350" height="450"></li>
+		<li><img src="images/02.jpg" width="350" height="400"></li>
+		<li><img src="images/03.jpg" width="500" height="400"></li>
+		<li><img src="images/04.jpg" width="500" height="400"></li>
+		<li><img src="images/05.jpg" width="500" height="400"></li>
+		<li><img src="images/06.jpg" width="450" height="400"></li>
+		<li><img src="images/07.jpg" width="500" height="300"></li>
+		<li><img src="images/08.jpg" width="400" height="400"></li>
+	</ul>
+</div>
+    
+
+
+	
+	
+<div id="templatemo_footer_wrapper">
+ <div id="templatemo_footer">
+
+    <ul class="footer_menu">
+                <li><a href="index.html" class="current">Главная</a></li>
+                <li><a href="gal.html">Галерея</a></li>
+                <li><a href="koll.html">Колекции</a></li>
+              	<li><a href="Contact.html">Контакты</a></li>
+    </ul>
+<a href=gal.html>Назад</a>
+    <div class="bottom_addr">© Клавсюк Артём</div></div>
+
+</div> <!-- end of footer -->
+</div>
+
+</body>
+</html>
